@@ -178,7 +178,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>au.stock.StockApp</mainClass> <!-- 指定主类 -->
+                    <mainClass>com.novelhub.NovelHubApp</mainClass> <!-- 指定主类 -->
                 </configuration>
             </plugin>
             <!-- 显式配置编译器插件 -->
