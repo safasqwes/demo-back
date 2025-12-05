@@ -1,5 +1,7 @@
+ARG JAVA_VERSION=17
+
 # Build stage
-FROM maven:3.8.5-openjdk-17 AS build
+FROM maven:3.8.5-openjdk-${JAVA_VERSION} AS build
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
@@ -11,9 +13,8 @@ RUN mvn clean compile -e
 RUN mvn clean package -DskipTests
 
 # Run stage
-FROM openjdk:17-jdk-slim
+FROM openjdk:${JAVA_VERSION}-jdk-slim
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
-

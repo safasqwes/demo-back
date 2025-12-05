@@ -1,7 +1,10 @@
 version: '3.8'
 services:
   app:
-    build: .
+    build:
+      context: .
+      args:
+        JAVA_VERSION: 17
     container_name: novelhub-backend
     ports:
       - "8080:8080"
