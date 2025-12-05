@@ -16,8 +16,8 @@
     <properties>
         <java.version>17</java.version>
         <maven.compiler.version>3.11.0</maven.compiler.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -38,7 +38,7 @@
 
         <leancloud.version>8.2.28</leancloud.version>
 
-        <lombok.version>1.18.24</lombok.version>
+        <lombok.version>1.18.34</lombok.version>
         <hutool.version>5.7.16</hutool.version>
         <fastjson2.version>2.0.45</fastjson2.version>
     </properties>

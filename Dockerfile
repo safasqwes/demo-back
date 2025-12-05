@@ -4,6 +4,10 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 # Skip tests to speed up build
+RUN echo "检查Java maven版本:"
+RUN java -version
+RUN mvn -version
+RUN mvn clean compile -e
 RUN mvn clean package -DskipTests
 
 # Run stage
